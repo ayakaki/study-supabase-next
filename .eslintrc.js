@@ -20,5 +20,6 @@ module.exports = {
     'next.config.js',
     'tailwind.config.js',
     'jest.config.js',
+    'src/libs/supabase.ts',
   ], // 解析対象からの除外
 };
