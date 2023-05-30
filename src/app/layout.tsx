@@ -1,14 +1,8 @@
-import { PAGE_METAS } from '@/constants/meta';
 import '@/styles/globals.css';
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: PAGE_METAS.HOME.TITLE,
-  description: PAGE_METAS.HOME.DESCRIPTION,
-};
 
 const RootLayout = ({
   children,
@@ -17,7 +11,18 @@ const RootLayout = ({
 }): JSX.Element => {
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav className="mx-auto flex h-12 justify-between items-center">
+          <Link href="/" className="text-2xl ml-4">
+            supabaseTrial
+          </Link>
+          <Link href="/login" className="p-2 mr-12">
+            ログイン
+          </Link>
+        </nav>
+
+        {children}
+      </body>
     </html>
   );
 };

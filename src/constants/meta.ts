@@ -9,4 +9,8 @@ export const PAGE_METAS = {
     TITLE: 'About',
     DESCRIPTION: 'This is about page',
   },
+  LOGIN: {
+    TITLE: 'Login',
+    DESCRIPTION: 'This is login page',
+  },
 };
